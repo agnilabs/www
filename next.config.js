@@ -4,7 +4,19 @@
  */
 import "./src/env.js";
 
-/** @type {import("next").NextConfig} */
-const config = {};
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ["picsum.photos", "utfs.io"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "utfs.io",
+      },
+    ],
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+};
 
-export default config;
+export default nextConfig;
