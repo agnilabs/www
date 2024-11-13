@@ -1,7 +1,7 @@
 export const endeavours = [
   {
     title: "chronicle",
-    icon: "https://utfs.io/f/70ihSaB10mQq98YB2En1SmPv2jyBMRtlWwGcL3CboZAzXFip",
+    icon: "https://utfs.io/f/70ihSaB10mQqnEnfjiNVIok9ElLZ2hbFmBqD7WK4MNAwvCOr",
     description: "own a piece of history",
     url: "https://chronicle.agnilabs.xyz",
     status: null,
@@ -9,7 +9,7 @@ export const endeavours = [
   },
   {
     title: "codepracs",
-    icon: "https://utfs.io/f/70ihSaB10mQqzDhQnbfVQPvgdJG1348jkIHraX2CwuEmlx0y",
+    icon: "https://utfs.io/f/70ihSaB10mQqWD6Ko4nGKoYlCFmTu1L7ZPE3vVqntikfQBdp",
     description:
       "The go-to place where all sorts of developers can get best practices with practical and proven tips, techniques, and guides to feel ready to jump right in",
     url: "https://codepracs.agnilabs.xyz",
@@ -18,7 +18,7 @@ export const endeavours = [
   },
   {
     title: "Gamefessions",
-    icon: "https://utfs.io/f/70ihSaB10mQqfZ0SpF9IPV7tqapnMhk8Rzi6WTOSAyHYwgGb",
+    icon: "https://utfs.io/f/70ihSaB10mQqmcMkxS58pTF3YZA9qLv1VEfknlRDgzosWB8H",
     description:
       "Completely anonymous confessions tweeted for the sake of vulnerability, transparency, and trust within gaming industry",
     url: "https://twitter.com/gamefessions",
@@ -27,7 +27,7 @@ export const endeavours = [
   },
   {
     title: "vGlogs",
-    icon: "https://utfs.io/f/70ihSaB10mQqslsmLSx5M4n8Q6GANpKhPVwL1kcEl0vfeFYI",
+    icon: "https://utfs.io/f/70ihSaB10mQqeRZB18iK3ECBQZimON579aXArHfLkjVvF64M",
     description: "A place where gamers can share their stories",
     url: "https://vGlogs.com",
     status: null,
@@ -35,7 +35,7 @@ export const endeavours = [
   },
   {
     title: "Nothingness",
-    icon: "https://utfs.io/f/70ihSaB10mQqfT2WwA9IPV7tqapnMhk8Rzi6WTOSAyHYwgGb",
+    icon: "https://utfs.io/f/70ihSaB10mQqEeQMDTgXckhNrsBGm0YqU97ed2K3CTgAoS5L",
     description:
       "We all have that thought (or two) in our head that we want to get out but can't. Just type your thought away and watch it disappear into the realm of nothing",
     url: "https://adiadd.xyz/nothingness",
