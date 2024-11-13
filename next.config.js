@@ -7,7 +7,6 @@ import "./src/env.js";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["picsum.photos", "utfs.io"],
     remotePatterns: [
       {
         protocol: "https",

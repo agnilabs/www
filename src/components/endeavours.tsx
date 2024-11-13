@@ -7,9 +7,29 @@ import { endeavours } from "~/config/endavours";
 
 export const Endeavours = () => {
   const ITEM_HEIGHT = 112;
-  const GRID_COLS = 4;
-  const gridRows = Math.ceil(endeavours.length / GRID_COLS);
-  const totalHeight = ITEM_HEIGHT * gridRows;
+  const DESKTOP_GRID_COLS = 4;
+  const MOBILE_GRID_COLS = 2;
+  const desktopRows = Math.ceil(endeavours.length / DESKTOP_GRID_COLS);
+  const mobileRows = Math.ceil(endeavours.length / MOBILE_GRID_COLS);
+
+  const [isMobile, setIsMobile] = useState(true);
+  const [totalHeight, setTotalHeight] = useState(
+    `${ITEM_HEIGHT * mobileRows}px`,
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      setTotalHeight(`${ITEM_HEIGHT * (mobile ? mobileRows : desktopRows)}px`);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [desktopRows, mobileRows]);
 
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isIconicHovered, setIsIconicHovered] = useState(false);
@@ -24,23 +44,24 @@ export const Endeavours = () => {
   }, [isIconicHovered]);
 
   const renderGridIntersections = () => {
-    const rows = Math.ceil(endeavours.length / 4);
+    const cols = isMobile ? MOBILE_GRID_COLS : DESKTOP_GRID_COLS;
+    const rows = Math.ceil(endeavours.length / cols);
     const intersections = [];
-    const horizontalPoints = 4 + 1;
+    const horizontalPoints = cols + 1;
     const verticalPoints = rows + 1;
 
     for (let row = 0; row < verticalPoints; row++) {
       for (let col = 0; col < horizontalPoints; col++) {
         const isHighlighted =
           hoveredIndex !== null &&
-          // Check if this intersection point is one of the four corners of the hovered item
-          ((row === Math.floor(hoveredIndex / 4) && col === hoveredIndex % 4) || // top-left
-            (row === Math.floor(hoveredIndex / 4) &&
-              col === (hoveredIndex % 4) + 1) || // top-right
-            (row === Math.floor(hoveredIndex / 4) + 1 &&
-              col === hoveredIndex % 4) || // bottom-left
-            (row === Math.floor(hoveredIndex / 4) + 1 &&
-              col === (hoveredIndex % 4) + 1)); // bottom-right
+          ((row === Math.floor(hoveredIndex / cols) &&
+            col === hoveredIndex % cols) || // top-left
+            (row === Math.floor(hoveredIndex / cols) &&
+              col === (hoveredIndex % cols) + 1) || // top-right
+            (row === Math.floor(hoveredIndex / cols) + 1 &&
+              col === hoveredIndex % cols) || // bottom-left
+            (row === Math.floor(hoveredIndex / cols) + 1 &&
+              col === (hoveredIndex % cols) + 1)); // bottom-right
 
         intersections.push(
           <div
@@ -57,8 +78,9 @@ export const Endeavours = () => {
                   ? "0%"
                   : col === horizontalPoints - 1
                     ? "100%"
-                    : `${(col * 100) / 4}%`,
+                    : `${(col * 100) / cols}%`,
               transform: "translate(-50%, -50%)",
+              pointerEvents: "none",
             }}
           >
             +
@@ -79,18 +101,18 @@ export const Endeavours = () => {
       </div>
 
       <div className="relative" style={{ height: totalHeight }}>
-        {/* Grid intersections - show on all screen sizes */}
         <div>{renderGridIntersections()}</div>
 
-        {/* Grid view - show on all screen sizes */}
         <div
-          className="grid grid-cols-2 md:grid-cols-4"
+          className="grid grid-cols-2 gap-4 md:grid-cols-4"
           style={{ height: totalHeight }}
         >
           {endeavours.map((client, index) => (
             <div
               key={client.title}
-              className={`group ${client.disabled ? "cursor-default" : "cursor-pointer"}`}
+              className={`group flex items-center justify-center ${
+                client.disabled ? "cursor-default" : "cursor-pointer"
+              }`}
               style={{ height: "112px" }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
