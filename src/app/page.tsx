@@ -1,11 +1,13 @@
 import { Endeavours } from "~/components/endeavours";
 import { Footer } from "~/components/footer";
+import Navigation from "~/components/nav";
 
 export default function HomePage() {
   return (
     <main className="flex min-h-screen flex-col">
       <div className="flex-grow font-mono">
-        <div className="mx-auto mb-8 mt-8 max-w-4xl px-4 sm:mt-20">
+        <Navigation />
+        <div className="mx-auto max-w-4xl px-4">
           <div className="mx-auto">
             <div className="max-w-xl py-5">
               <h1 className="mb-4 h-[80px] cursor-default text-3xl font-bold sm:h-auto">
