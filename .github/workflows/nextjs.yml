@@ -23,6 +23,8 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    env:
+      URL: https://agnilabs.xyz
     steps:
       - name: Checkout
         uses: actions/checkout@v4
