@@ -6,7 +6,6 @@ import "./src/env.js";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
   images: {
     domains: ["picsum.photos", "utfs.io"],
     remotePatterns: [
