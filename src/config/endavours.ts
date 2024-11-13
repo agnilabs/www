@@ -26,6 +26,14 @@ export const endeavours = [
     disabled: false,
   },
   {
+    title: "vGlogs",
+    icon: "https://utfs.io/f/70ihSaB10mQqslsmLSx5M4n8Q6GANpKhPVwL1kcEl0vfeFYI",
+    description: "A place where gamers can share their stories",
+    url: "https://vGlogs.com",
+    status: null,
+    disabled: false,
+  },
+  {
     title: "Nothingness",
     icon: "https://utfs.io/f/70ihSaB10mQqfT2WwA9IPV7tqapnMhk8Rzi6WTOSAyHYwgGb",
     description:
