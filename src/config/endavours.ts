@@ -1,5 +1,13 @@
 export const endeavours = [
   {
+    title: "scoop",
+    icon: "https://utfs.io/f/70ihSaB10mQqdOOxZJaKBbk67ge9qcYSEQOaRxCHXj1UpNh5",
+    description: "10-second sports updates for busy fans",
+    url: "https://scoop.agnilabs.xyz",
+    status: null,
+    disabled: false,
+  },
+  {
     title: "chronicle",
     icon: "https://utfs.io/f/70ihSaB10mQqnEnfjiNVIok9ElLZ2hbFmBqD7WK4MNAwvCOr",
     description: "own a piece of history",
