@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useScramble } from "use-scramble";
+import { Spinner } from "~/components/spinner";
 import { endeavours } from "~/config/endavours";
 
 export const Endeavours = () => {
@@ -119,13 +120,19 @@ export const Endeavours = () => {
             >
               {client.disabled ? (
                 <div className="relative flex h-full items-center justify-center">
-                  <Image
-                    src={client.icon}
-                    alt=""
-                    width={500}
-                    height={500}
-                    className="h-12 w-auto object-contain transition-opacity group-hover:opacity-0 dark:invert"
-                  />
+                  {client.icon === "" ? (
+                    <div className="transition-opacity group-hover:opacity-0">
+                      <Spinner size="medium" />
+                    </div>
+                  ) : (
+                    <Image
+                      src={client.icon}
+                      alt=""
+                      width={500}
+                      height={500}
+                      className="h-12 w-auto object-contain transition-opacity group-hover:opacity-0 dark:invert"
+                    />
+                  )}
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 transition-opacity group-hover:opacity-100">
                     {hoveredIndex === index ? (
                       <>
@@ -153,13 +160,19 @@ export const Endeavours = () => {
                   rel="noopener noreferrer"
                   className="relative flex h-full items-center justify-center"
                 >
-                  <Image
-                    src={client.icon}
-                    alt=""
-                    width={500}
-                    height={500}
-                    className="h-12 w-auto object-contain transition-opacity group-hover:opacity-0 dark:invert"
-                  />
+                  {client.icon === "" ? (
+                    <div className="transition-opacity group-hover:opacity-0">
+                      <Spinner size="medium" />
+                    </div>
+                  ) : (
+                    <Image
+                      src={client.icon}
+                      alt=""
+                      width={500}
+                      height={500}
+                      className="h-12 w-auto object-contain transition-opacity group-hover:opacity-0 dark:invert"
+                    />
+                  )}
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 transition-opacity group-hover:opacity-100">
                     {hoveredIndex === index ? (
                       <>

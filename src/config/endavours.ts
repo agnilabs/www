@@ -1,5 +1,13 @@
 export const endeavours = [
   {
+    title: "cracked engineers club",
+    icon: "",
+    description: "A community of engineers sharing knowledge and experiences",
+    url: "https://crackedengineers.club",
+    status: null,
+    disabled: false,
+  },
+  {
     title: "scoop",
     icon: "https://utfs.io/f/70ihSaB10mQqdOOxZJaKBbk67ge9qcYSEQOaRxCHXj1UpNh5",
     description: "10-second sports updates for busy fans",
