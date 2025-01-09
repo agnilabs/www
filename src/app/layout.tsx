@@ -1,10 +1,10 @@
 import "~/styles/globals.css";
 
+import { Analytics } from "@vercel/analytics/next";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
-import { Inter } from "next/font/google";
-
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import { ThemeProvider } from "~/components/theme-provider";
 import { siteConfig } from "~/config/site";
 
@@ -45,6 +45,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
