@@ -1,5 +1,13 @@
 export const endeavours = [
   {
+    title: "anthrobench",
+    icon: "https://hnrdpjm45v.ufs.sh/f/70ihSaB10mQqDegXqQF5MFJLA96KiwgkQl0rzDyExTR7So8V",
+    description: "anthropocentric benchmarks for ai",
+    url: "https://anthrobench.agnilabs.xyz",
+    status: null,
+    disabled: false,
+  },
+  {
     title: "cracked engineers club",
     icon: "",
     description: "A community of engineers sharing knowledge and experiences",
