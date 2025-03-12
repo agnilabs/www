@@ -1,9 +1,9 @@
 export const endeavours = [
   {
-    title: "anthrobench",
+    title: "socius",
     icon: "https://hnrdpjm45v.ufs.sh/f/70ihSaB10mQqDegXqQF5MFJLA96KiwgkQl0rzDyExTR7So8V",
-    description: "anthropocentric benchmarks for ai",
-    url: "https://anthrobench.agnilabs.xyz",
+    description: "anthropocentric scenarios for ai",
+    url: "https://socius.agnilabs.xyz",
     status: null,
     disabled: false,
   },
