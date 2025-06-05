@@ -1,5 +1,13 @@
 export const endeavours = [
   {
+    title: "ReadWave",
+    icon: "https://hnrdpjm45v.ufs.sh/f/70ihSaB10mQq3xNEbtQaUPbqlGi08n41pouWkHzaQtDhvyfR",
+    description: "read untethered; thoughts to insights",
+    url: "https://readwave.app",
+    status: null,
+    disabled: false,
+  },
+  {
     title: "socius",
     icon: "https://hnrdpjm45v.ufs.sh/f/70ihSaB10mQqDegXqQF5MFJLA96KiwgkQl0rzDyExTR7So8V",
     description: "anthropocentric scenarios for ai",
@@ -9,7 +17,7 @@ export const endeavours = [
   },
   {
     title: "cracked engineers club",
-    icon: "",
+    icon: "https://hnrdpjm45v.ufs.sh/f/70ihSaB10mQqvEEOR3F0owEurWepbINL2Tx34smGCSOFitAj",
     description: "A community of engineers sharing knowledge and experiences",
     url: "https://crackedengineers.club",
     status: null,
