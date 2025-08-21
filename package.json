@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "build": "next build",
-    "check": "next lint && tsc --noEmit",
+    "check": "eslint . && tsc --noEmit",
     "dev": "next dev --turbopack",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "preview": "next build && next start",
     "start": "next start",
     "typecheck": "tsc --noEmit",
@@ -32,6 +32,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.14.10",
     "@types/react": "19.1.10",

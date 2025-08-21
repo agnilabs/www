@@ -4,6 +4,7 @@ const config = {
   "parserOptions": {
     "project": true
   },
+  "ignorePatterns": ["next-env.d.ts", "postcss.config.js", "prettier.config.js", "tailwind.config.ts"],
   "plugins": [
     "@typescript-eslint"
   ],
@@ -38,13 +39,5 @@ const config = {
       }
     ]
   },
-  overrides: [
-    {
-      files: ["tailwind.config.ts", "tailwind.config.js"],
-      rules: {
-        "@typescript-eslint/no-var-requires": "off",
-      },
-    },
-  ],
 };
 module.exports = config;
