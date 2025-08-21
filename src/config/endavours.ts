@@ -1,9 +1,9 @@
 export const endeavours = [
   {
-    title: "ReadWave",
-    icon: "https://hnrdpjm45v.ufs.sh/f/70ihSaB10mQq3xNEbtQaUPbqlGi08n41pouWkHzaQtDhvyfR",
-    description: "read untethered; thoughts to insights",
-    url: "https://readwave.app",
+    title: "ducky",
+    icon: "https://hnrdpjm45v.ufs.sh/f/70ihSaB10mQqgha2VnXuc85zxIZJXjiYfyPAnN6stkD7rmRb",
+    description: "voice ai that helps you think through problems, debug code, and bounce ideas around",
+    url: "https://withducky.com",
     status: null,
     disabled: false,
   },
