@@ -1,7 +1,7 @@
 export const endeavours = [
   {
     title: "ducky",
-    icon: "https://hnrdpjm45v.ufs.sh/f/70ihSaB10mQqgha2VnXuc85zxIZJXjiYfyPAnN6stkD7rmRb",
+    icon: "https://hnrdpjm45v.ufs.sh/f/70ihSaB10mQqmAHD4N8pTF3YZA9qLv1VEfknlRDgzosWB8Hu",
     description: "voice ai that helps you think through problems, debug code, and bounce ideas around",
     url: "https://withducky.com",
     status: null,
