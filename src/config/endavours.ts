@@ -1,4 +1,14 @@
-export const endeavours = [
+type Endeavour = {
+  title: string;
+  icon: string;
+  description: string;
+  url: string;
+  status: string | null;
+  activity?: "active" | "inactive";
+  disabled: boolean;
+};
+
+export const endeavours: Endeavour[] = [
   {
     title: "ducky",
     icon: "https://hnrdpjm45v.ufs.sh/f/70ihSaB10mQqmAHD4N8pTF3YZA9qLv1VEfknlRDgzosWB8Hu",
@@ -6,6 +16,7 @@ export const endeavours = [
       "voice ai that helps you think through problems, debug code, and bounce ideas around",
     url: "https://withducky.com",
     status: null,
+    activity: "active",
     disabled: false,
   },
   {
@@ -14,6 +25,7 @@ export const endeavours = [
     description: "anthropocentric scenarios for ai",
     url: "https://socius.agnilabs.xyz",
     status: null,
+    activity: "inactive",
     disabled: false,
   },
   {
@@ -22,6 +34,7 @@ export const endeavours = [
     description: "A community of engineers sharing knowledge and experiences",
     url: "https://crackedengineers.club",
     status: null,
+    activity: "inactive",
     disabled: false,
   },
   {
@@ -30,6 +43,7 @@ export const endeavours = [
     description: "10-second sports updates for busy fans",
     url: "https://scoop.agnilabs.xyz",
     status: null,
+    activity: "inactive",
     disabled: false,
   },
   {
@@ -38,6 +52,7 @@ export const endeavours = [
     description: "own a piece of history",
     url: "https://chronicle.agnilabs.xyz",
     status: null,
+    activity: "inactive",
     disabled: false,
   },
   {
@@ -47,6 +62,7 @@ export const endeavours = [
       "The go-to place where all sorts of developers can get best practices with practical and proven tips, techniques, and guides to feel ready to jump right in",
     url: "https://codepracs.agnilabs.xyz",
     status: null,
+    activity: "inactive",
     disabled: false,
   },
   {
@@ -56,6 +72,7 @@ export const endeavours = [
       "Completely anonymous confessions tweeted for the sake of vulnerability, transparency, and trust within gaming industry",
     url: "https://twitter.com/gamefessions",
     status: null,
+    activity: "inactive",
     disabled: false,
   },
   {
@@ -64,6 +81,7 @@ export const endeavours = [
     description: "A place where gamers can share their stories",
     url: "https://vGlogs.com",
     status: null,
+    activity: "inactive",
     disabled: false,
   },
   {
@@ -73,6 +91,7 @@ export const endeavours = [
       "We all have that thought (or two) in our head that we want to get out but can't. Just type your thought away and watch it disappear into the realm of nothing",
     url: "https://adiadd.xyz/nothingness",
     status: null,
+    activity: "inactive",
     disabled: true,
   },
 ];
